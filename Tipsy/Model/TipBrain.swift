@@ -9,7 +9,7 @@ import Foundation
 
 struct TipBrain {
     
-    var tip: Tip?
+    var tip: Tip? // Making it optional.
     
     mutating func getTipPerPersonWith(_ totalBill: Double, _ tipPercent: Double, _ noOfPpl: Double) {
         
