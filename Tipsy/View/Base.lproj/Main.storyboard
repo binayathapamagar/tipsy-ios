@@ -152,7 +152,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS6-xv-lCD">
-                                <rect key="frame" x="114" y="837" width="200" height="55"/>
+                                <rect key="frame" x="114" y="822" width="200" height="55"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Y0l-vN-wM5"/>
@@ -170,7 +170,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rS6-xv-lCD" secondAttribute="bottom" id="2aV-yw-5ch"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rS6-xv-lCD" secondAttribute="bottom" constant="15" id="2aV-yw-5ch"/>
                             <constraint firstItem="WT3-YX-8ly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4r9-bO-eBC"/>
                             <constraint firstItem="rS6-xv-lCD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIS-aV-Cd6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WT3-YX-8ly" secondAttribute="trailing" id="Bko-ws-GeO"/>
@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-dn-IsL">
-                                <rect key="frame" x="114" y="783" width="200" height="55"/>
+                                <rect key="frame" x="114" y="768" width="200" height="55"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="j0S-vf-Q0c"/>
@@ -265,7 +265,7 @@
                             <constraint firstItem="NPb-Yl-rO3" firstAttribute="top" secondItem="xLl-Z6-3gD" secondAttribute="bottom" constant="30" id="bRQ-Ne-2gP"/>
                             <constraint firstItem="eTq-kE-qPq" firstAttribute="trailing" secondItem="xLl-Z6-3gD" secondAttribute="trailing" id="l39-Ky-h2V"/>
                             <constraint firstItem="NPb-Yl-rO3" firstAttribute="leading" secondItem="eTq-kE-qPq" secondAttribute="leading" id="mHK-ZG-5TS"/>
-                            <constraint firstItem="eTq-kE-qPq" firstAttribute="bottom" secondItem="AXB-dn-IsL" secondAttribute="bottom" id="oNa-ju-EDh"/>
+                            <constraint firstItem="eTq-kE-qPq" firstAttribute="bottom" secondItem="AXB-dn-IsL" secondAttribute="bottom" constant="15" id="oNa-ju-EDh"/>
                             <constraint firstItem="xLl-Z6-3gD" firstAttribute="leading" secondItem="eTq-kE-qPq" secondAttribute="leading" id="pos-Re-pPD"/>
                         </constraints>
                     </view>
