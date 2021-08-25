@@ -24,11 +24,14 @@ class TipsyViewController: UIViewController, UITextFieldDelegate{
         calculateButton.layer.cornerRadius = 10
         textField.delegate = self
         textField.attributedPlaceholder = NSAttributedString(string: "e.g. 123.56", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if let navigationBar = navigationController?.navigationBar {
             navigationBar.tintColor = .black
+            navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
         }
     }
     
@@ -51,6 +54,17 @@ class TipsyViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        
+        let textWithNoWhiteSpaces = textField.text!.trimmingCharacters(in: .whitespaces)
+        
+        if textWithNoWhiteSpaces.isEmpty {
+            showErrorAlert(with: "Please enter a value. TextField is empty.")
+            return
+        }else if Double(textWithNoWhiteSpaces) == nil {
+            showErrorAlert(with: "Please enter a valid value")
+            return
+        }
+        
         let totalBill = Double(textField.text ?? "0") ?? 0.0
         let noOfPplToSplit = stepper.value
         
@@ -62,8 +76,9 @@ class TipsyViewController: UIViewController, UITextFieldDelegate{
         }else {
             tipBrain.getTipPerPersonWith(totalBill, 0.2, noOfPplToSplit)
         }
-            
+        
         performSegue(withIdentifier: "goToResult", sender: self)
+            
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,5 +90,16 @@ class TipsyViewController: UIViewController, UITextFieldDelegate{
         }
         
     }
+    
+    //MARK: - Instance Method
+    
+    func showErrorAlert(with errorMessage: String) {
+        let alertController = UIAlertController(title: "ERROR!", message: errorMessage, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+    
 }
 
