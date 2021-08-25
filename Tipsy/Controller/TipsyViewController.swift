@@ -26,6 +26,12 @@ class TipsyViewController: UIViewController, UITextFieldDelegate{
         textField.attributedPlaceholder = NSAttributedString(string: "e.g. 123.56", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let navigationBar = navigationController?.navigationBar {
+            navigationBar.tintColor = .black
+        }
+    }
+    
     @IBAction func tipPercentagePressed(_ sender: UIButton) {
         textField.endEditing(true)
         zeroPercentButton.isSelected = false
